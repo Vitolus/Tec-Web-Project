@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Area riservata istruttori - Palestra di arrampicata GAM</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex"/>
+</head>
+
+<body>
+  <app-header></app-header>
+
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in: <a href="index.php" lang="en">Home</a> / Area Riservata</em>
+    </p>
+  </nav>
+  <main>
+    <section>
+      <h1>Benvenuto {{ instructorName }}</h1>
+    </section>
+    <a href="reserved-area/instructor/list.php" class="button">I tuoi corsi</a>
+    <a href="reserved-area/profile.php" class="button">Modifica profilo</a>
+    <a href="reserved-area/logout.php" class="button">Log out</a>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

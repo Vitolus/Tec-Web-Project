@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Aggiungi abbonamento - Palestra di arrampicata GAM</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex"/>
+  <script src='scripts/admins/add-sub.js'></script>
+</head>
+
+<body class="add">
+  <app-header></app-header>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        /
+        <a href="reserved-area/admins/subs.php">Amministrazione abbonamenti</a>
+        / Aggiungi abbonamento
+      </em>
+    </p>
+  </nav>
+  
+  <main>
+    <form class="cols-2" id="add">
+      <label for="durata"><strong>Durata:</strong></label>
+      <input type="text" id="durata" name="durata" placeholder="Nome" minlength="5" maxlength="32" required/>
+      
+      <label for="dataInizio"><strong>Data di inizio:</strong></label>
+      <input type="date" id="dataInizio" name="dataInizio" required/>
+  
+      <label for="dataFine"><strong>Data di fine:</strong></label>
+      <input type="date" id="dataFine" name="dataFine" required/>
+  
+      <div class="col-span-2">
+        <input type="submit" value="Aggiungi" class="button"/>
+      </div>
+    </form>
+    
+    <div class="alert error hidden" id="form-error"></div>
+    
+    <div class="alert success hidden" id="form-success">
+      <p>
+        Abbonamento aggiunto con successo!
+        <a href='reserved-area/admins/subs.php'>Clicca qui per tornare agli abbonamenti disponibili</a>.
+      </p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

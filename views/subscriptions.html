@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Abbonamenti - Palestra di arrampicata GAM</title>
+  <app-head></app-head>
+</head>
+
+<body>
+  <app-header></app-header>
+
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in: <a href="index.php" lang="en">Home</a> / Abbonamenti</em>
+    </p>
+  </nav>
+
+  <main>
+    <table
+      id="subscriptions"
+      summary="La tabella elenca gli abbonamenti disponibili per l'acquisto. Ciascuna riga contiene il tipo e la durata dello stesso (ovvero la data di inizio e la data di fine validità)">
+      <caption>
+        <h1>Abbonamenti disponibili</h1>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Tipo</th>
+          <th scope="col">Data di inizio</th>
+          <th scope="col">Data di fine</th>
+        </tr>
+      </thead>
+      <tbody>
+        <data-subs></data-subs>
+      </tbody>
+    </table>
+
+    <div class="alert warning hidden" id="subscriptions-empty" role="alert">Nessun abbonamento al momento disponibile</div>
+
+    <div id="scroll-top-wrapper" class="rounded-full">
+      <a class="rounded-full" href="subscriptions.php#"><img src="assets/images/arrow.svg" alt="Torna su"></a>
+    </div>
+  </main>
+
+  <app-footer></app-footer>
+</body>
+
+</html>

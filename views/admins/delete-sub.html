@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Cancella abbonamento - Palestra di arrampicata GAM</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex"/>
+  <script src="scripts/admins/delete-sub.js"></script>
+</head>
+
+<body class="delete">
+  <app-header></app-header>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        /
+        <a href="reserved-area/admins/subs.php">Amministrazione abbonamenti</a>
+        / Cancella abbonamento
+      </em>
+    </p>
+  </nav>
+  <main>
+    <section>
+      <h1>Cancella abbonamento</h1>
+      <p>
+        Qui puoi <strong>cancellare</strong> l'abbonamento "<strong>{{ subscriptionDurata }}</strong>".
+      </p>
+    </section>
+    
+    <form class="cols-2" id="delete">
+      <p>Sei sicuro di voler cancellare l'abbonamento?</p>
+      
+      <div>
+        <a href="reserved-area/admins/subs.php">Annulla</a>
+        <input type="submit" value="Cancella" class="button"/>
+      </div>
+    </form>
+    
+    <div class='alert error hidden' id='form-error'>
+      <p>Errore durante l'operazione di cancellazione.</p>
+    </div>
+    
+    <div class='alert success hidden' id='form-success'>
+      <p>
+        L'abbonamento è stato cancellato con successo.
+        <a href='reserved-area/admins/subs.php'>Clicca qui per tornare all'amministrazione degli abbonamenti</a>.
+      </p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

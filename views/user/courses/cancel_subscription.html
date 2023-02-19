@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Abbonamento</title>
+        <app-head></app-head>
+        <meta name="robots" content="noindex"/>
+        <script src="scripts/user/subscription/sub.js"></script>
+      </head>
+<body>
+    <app-header></app-header>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        /
+        <a href="reserved-area/user/courses.php">Annulla Abbonamento</a>
+      </em>
+    </p>
+  </nav>
+  <main>
+    <h1>Abbonamento</h1>
+    <p>
+      Qui puoi vedere l'abbonamento.
+    </p>
+
+    <article id="gruppi">
+        <table
+            summary="La tabella elenca i corsi di gruppo disponibili per l'iscrizione. Ciascuna riga contiene il nome del corso, la descrizione e l'istruttore che tiene il corso">
+            <caption>
+            <h2>Abbonamenti utente</h2>
+            </caption>
+            <thead>
+            <tr>
+                <th scope="col">Data inizio</th>
+                <th scope="col">Data fine</th>
+            </tr>
+            </thead>
+            <tbody>
+            <data-group></data-group>
+            </tbody>
+        </table>
+    </article>
+
+  </main>
+
+  <app-footer></app-footer>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Contatti - Palestra di arrampicata GAM</title>
+  <app-head></app-head>
+  <script src="scripts/fetch.js"></script>
+</head>
+
+<body>
+  <app-header></app-header>
+
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in: <a href="index.php" lang="en">Home</a> / Contatti</em>
+    </p>
+  </nav>
+  <main>
+    <h1>Contatti</h1>
+
+    <section>
+      <h2>Info</h2>
+      <p><strong>Telefono ufficio</strong>: <a href="tel:+390415284444">0415284444</a></p>
+      <p><strong>Telefono cellulare</strong>: <a href="tel:+391230920262">123 0920262</a></p>
+      <p><strong>Indirizzo e-mail segreteria</strong>: <a
+          href="mailto:segreteria@gamclimbing.it">segreteria@gamclimbing.it</a></p>
+    </section>
+
+    <section>
+      <h2>Compila il form per fissare un appuntamento</h2>
+      <p>Sarai contattato telefonicamente dal nostro staff.
+        Avrai diritto a conoscere le nostre migliori proposte, offerte e vantaggi a te riservati, che potrai consultare
+        alla fine della tua registrazione.</p>
+
+      <form id="contacts" class="cols-2">
+        <label for="name"><strong>Nome:</strong></label>
+        <input type="text" id="name" name="name" placeholder="Nome" minlength="4" maxlength="64" required="required" />
+
+        <label for="surname"><strong>Cognome:</strong></label>
+        <input type="text" id="surname" name="surname" placeholder="Cognome" minlength="4" maxlength="64"
+          required="required" />
+
+        <label for="email-address"><strong>E-mail:</strong></label>
+        <input type="email" id="email-address" name="email-address" placeholder="E-mail" minlength="5" maxlength="64"
+          required="required" />
+
+        <label for="phone-number"><strong>Telefono cellulare:</strong></label>
+        <input type="tel" id="phone-number" name="phone-number" placeholder="es: 3208768711" minlength="10"
+          maxlength="10" required="required" />
+
+        <p>Cliccando sul tasto "Proseguo", acconsento ad essere contattato e a ricevere offerte promozionali.</p>
+        <input type="submit" value="Proseguo" class="button" />
+      </form>
+
+      <div class="alert error hidden" id="form-error">
+        <p>Il modulo presenta degli errori. Correggerli e reinviarlo.</p>
+      </div>
+
+      <div class="alert success hidden" id="form-success">
+        <p>Grazie per averci contattato. Riceverai una comunicazione il prima possibile!!</p>
+      </div>
+    </section>
+
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

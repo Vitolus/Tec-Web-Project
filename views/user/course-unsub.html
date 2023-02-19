@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Disiscrizione corso</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex"/>
+  <script src="scripts/user/course-unsub.js"></script>
+</head>
+
+<body>
+  <app-header></app-header>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        / Disiscriviti da un corso
+      </em>
+    </p>
+  </nav>
+  <main>
+    <section>
+      <h1>Disiscrizione corso</h1>
+      <p>
+        Qui puoi <strong>disiscriverti</strong> dal corso "<strong>{{ courseTitle }}</strong>".
+      </p>
+    </section>
+    
+    <form class="cols-2" id="course-unsub">
+      <p>Sei sicuro di voler disiscriverti dal corso?</p>
+      
+      <div>
+        <a href="reserved-area/user/course.php?delete=true">Annulla</a>
+        <input type="submit" value="Disiscriviti" class="button"/>
+      </div>
+    </form>
+    
+    <div class='alert error hidden' id='form-error'>
+      <p>Errore durante l'operazione di disiscrizione.</p>
+    </div>
+    
+    <div class='alert success hidden' id='form-success'>
+      <p>
+        La tua disiscrizione dal corso è avvenuta con successo.
+        <a href='reserved-area/user/course.php?delete=true'>Clicca qui per tornare ai corsi</a>.
+      </p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

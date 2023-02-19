@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Login utente - Palestra di arrampicata GAM</title>
+    <app-head></app-head>
+    <script src="scripts/fetch.js"></script>
+</head>
+
+<body>
+    <app-header></app-header>
+    <nav id="breadcrumb" aria-label="breadcrumb">
+        <p>
+            <em>Ti trovi in: <a href="index.php" lang="en">Home</a> / Area Riservata</em>
+        </p>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Login</h1>
+            <p>
+                Inserisci il tuo <strong>Username</strong> e la tua <strong>Password</strong> per fare il login.
+            </p>
+
+            <form class="cols-2" id="login">
+                <label for="username"><strong>Nome utente:</strong></label>
+                <input type="text" id="username" name="username" placeholder="Nome utente" minlength="4" maxlength="16" />
+    
+                <label for="password"><strong>Password:</strong></label>
+                <input type="password" id="password" name="password" placeholder="Password" minlength="4" maxlength="32" />
+    
+                <div class="col-span-2 text-right">
+                    <input type="submit" value="Accedi" class="button" />
+                </div>
+            </form>
+    
+            <div class="alert error hidden" id="form-error"></div>
+    
+            <div class="alert success hidden" id="form-success">
+                <p>Login avvenuto con successo <a href="reserved-area/control-panel.php">Clicca qui per entrare nel tuo
+                        pannello personale</a>.</p>
+            </div>
+        </section>
+
+        <section id="register">
+            <h1>Registrati</h1>
+            <p>
+                Se sei un nuovo utente, puoi registrati gratuitamente e velocemente.
+                <a href="register.php" class="button">Registrati ora</a>
+            </p>
+        </section>
+    </main>
+    <app-footer></app-footer>
+</body>
+
+</html>

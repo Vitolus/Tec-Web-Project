@@ -1,0 +1,221 @@
+:root {
+    --accent-color: #801a16;
+    --accent-color-dark: #4b0705;
+    --accent-color-light: #fae7e7;
+}
+
+html,
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+html,
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+main,
+footer {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+#breadcrumb {
+    margin: 1rem auto;
+    max-width: 1200px;
+    background-color: var(--accent-color-light);
+    color: black;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+}
+
+main section {
+    margin-bottom: 2rem;
+}
+
+main section h1 {
+    font-size: 2rem;
+}
+
+#offerings>p {
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+table {
+    margin: 0 auto;
+    width: 95%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid var(--accent-color);
+}
+
+caption {
+    padding: 1rem;
+}
+
+thead {
+    background-color: var(--accent-color-light);
+}
+
+td,
+th {
+    border: 1px solid var(--accent-color);
+    padding: .5rem;
+}
+
+th[scope=row] {
+    font-weight: normal;
+}
+
+tr:nth-child(even) {
+    background-color: var(--accent-color-light);
+}
+
+footer {
+    background-color: var(--accent-color-light);
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+footer p {
+    color: rgb(94, 94, 94);
+}
+
+footer p.copyright {
+    text-align: center;
+}
+
+footer div.disclaimer {
+    grid-column: span 2 / span 2;
+    text-align: center;
+    font-style: italic;
+    font-size: .8em;
+}
+
+button,
+.button {
+    display: inline-block;
+    margin: .5rem;
+    padding: .5rem 1rem;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+input,
+textarea,
+select {
+    border: 1px solid lightgray;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    transition: .2s ease-in-out;
+}
+
+/** Generic classes **/
+.cols-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.cols-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.cols-4 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.cols-5 {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.flex {
+    display: flex;
+    gap: 1rem;
+}
+
+.rounded-full {
+    border-radius: 50%;
+}
+
+.alert {
+    display: block;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+}
+
+.alert a {
+    color: white;
+    font-weight: bold;
+}
+
+.alert.success {
+    background-color: green;
+    color: white;
+}
+
+.alert.error {
+    background-color: red;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+header,
+#menu,
+#scroll-top-wrapper,
+iframe,
+iframe+small,
+.aiuti {
+    display: none;
+}
+
+
+#breadcrumb,
+footer {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.cols-2,
+.cols-3,
+.cols-4,
+.cols-5 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.flex {
+    flex-direction: column;
+}
+
+a:after {
+    content: " (https://www.gamclimbing.it/" attr(href) ") ";
+}

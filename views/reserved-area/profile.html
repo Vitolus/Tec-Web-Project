@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Modifica profilo - Palestra di arrampicata GAM</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex" />
+  <script src="scripts/fetch.js"></script>
+</head>
+
+<body class="profile">
+  <app-header></app-header>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        / Modifica profilo</em>
+    </p>
+  </nav>
+
+  <main>
+    <section>
+      <h1>Modifica profilo</h1>
+      <p>
+        Qui potrai <strong>modificare</strong> la tua <strong>e-mail</strong>, la tua <strong>password</strong>, il tuo
+        <strong>username</strong> oppure il tuo <strong>numero</strong> di cellulare.
+      </p>
+    </section>
+
+    <form class="cols-2" id="modify-profile">
+      <data-group></data-group>
+
+      <div class="col-span-2 text-right">
+        <a href="reserved-area/index.php">Annulla</a>
+        <input type="submit" value="Modifica" class="button" />
+      </div>
+    </form>
+
+    <div class="alert error hidden" id="form-error">
+      <p>Alcuni campi modificati presentano delle irregolarità.</p>
+    </div>
+
+    <div class="alert success hidden" id="form-success">
+      <p>Modifica avvenuta con successo <a href="reserved-area/control-panel.php">Clicca qui per tornare all'Area
+          Riservata</a>.</p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

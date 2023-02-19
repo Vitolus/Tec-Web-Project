@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Iscrizione corso</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex"/>
+  <script src="scripts/user/course-sub.js"></script>
+</head>
+
+<body>
+  <app-header></app-header>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        /
+        <a href="reserved-area/user/courses.php">Iscriviti ad un corso</a>
+        / Iscrizione corso
+      </em>
+    </p>
+  </nav>
+  <main>
+    <section>
+      <h1>Iscrizione corso</h1>
+      <p>
+        Qui puoi <strong>iscriverti</strong> al corso "<strong>{{ courseTitle }}</strong>".
+      </p>
+    </section>
+    
+    <form class="cols-2" id="course-sub">
+      <p>Sei sicuro di voler iscriverti al corso?</p>
+      
+      <div>
+        <a href="reserved-area/user/course.php?delete=false">Annulla</a>
+        <input type="submit" value="Iscriviti" class="button"/>
+      </div>
+    </form>
+    
+    <div class='alert error hidden' id='form-error'>
+      <p>Errore durante l'operazione di iscrizione.</p>
+    </div>
+    
+    <div class='alert success hidden' id='form-success'>
+      <p>
+        La tua iscrizione al corso è avvenuta con successo.
+        <a href='reserved-area/user/course.php?delete=false'>Clicca qui per tornare ai corsi</a>.
+      </p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

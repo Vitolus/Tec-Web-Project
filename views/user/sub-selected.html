@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Abbonamento</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex"/>
+  <script src="scripts/user/subscription/sub.js"></script>
+</head>
+
+<body>
+  <app-header></app-header>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        /
+        <a href="reserved-area/user/subscription/subscription.php">Scelta abbonamento</a>
+        / Abbonati
+      </em>
+    </p>
+  </nav>
+  <main>
+    <section>
+      <h1>Abbonati corso</h1>
+      <p>
+        Qui puoi decidere se <strong>iniziare</strong> l'abbonamento <strong>precedentemente</strong> selezionato.
+      </p>
+    </section>
+    
+    <form class="cols-2" id="subscribe">
+      <p>Sei sicuro di voler <strong>abbonarti</strong> dal <strong>{{ start_date }}</strong> al <strong>{{ end_date }}</strong> ?</p>
+      <div>
+        <a href="reserved-area/user/subscription/subscription.php">Annulla</a>
+        <input type="submit" value="Abbonati" class="button"/>
+      </div>
+    </form>
+    
+    <div class='alert error hidden' id='form-error'>
+      <p>Errore durante l'operazione di iscrizione all'abbonamento.</p>
+    </div>
+    
+    <div class='alert success hidden' id='form-success'>
+      <p>
+        Il tuo abbonamento è stato registrato con successo.
+        <a href='reserved-area/control-panel.php'>Clicca qui per tornare alla tua area riservata</a>.
+      </p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

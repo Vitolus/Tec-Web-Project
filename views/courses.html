@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Corsi - Palestra di arrampicata GAM</title>
+  <app-head></app-head>
+</head>
+
+<body>
+  <app-header></app-header>
+
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in: <a href="index.php" lang="en">Home</a> / Corsi</em>
+    </p>
+  </nav>
+  <a class="aiuti" href="courses.php#gruppi">Salta ai corsi di gruppo</a>
+  <a class="aiuti" href="courses.php#privati">Salta ai corsi privati</a>
+
+  <main>
+    <h1>Corsi disponibili</h1>
+    <article id="gruppi">
+      <table id="group-courses"
+        summary="La tabella elenca i corsi di gruppo disponibili per l'iscrizione. Ciascuna riga contiene il nome del corso, la descrizione e l'istruttore che tiene il corso">
+        <caption>
+          <h2>Corsi di gruppo</h2>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Nome del corso</th>
+            <th scope="col">Descrizione</th>
+            <th scope="col">Istruttore</th>
+          </tr>
+        </thead>
+        <tbody>
+          <data-group></data-group>
+        </tbody>
+      </table>
+
+      <div class="alert warning hidden" id="group-courses-empty" role="alert">Nessun corso di gruppo al momento disponibile</div>
+    </article>
+
+    <article id="privati">
+      <table id="private-courses"
+        summary="La tabella elenca i corsi privati (ovvero personali) disponibili per l'iscrizione. Ciascuna riga contiene il nome del corso, la descrizione e l'istruttore che tiene il corso">
+        <caption>
+          <h2>Corsi privati</h2>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Nome del corso</th>
+            <th scope="col">Descrizione</th>
+            <th scope="col">Istruttore</th>
+          </tr>
+        </thead>
+        <tbody>
+          <data-private></data-private>
+        </tbody>
+      </table>
+
+      <div class="alert warning hidden" id="private-courses-empty" role="alert">Nessun corso privato al momento disponibile</div>
+    </article>
+
+    <div id="scroll-top-wrapper" class="rounded-full">
+      <a class="rounded-full" href="courses.php#"><img src="assets/images/arrow.svg" alt="Torna su"></a>
+    </div>
+  </main>
+
+  <app-footer></app-footer>
+</body>
+
+</html>

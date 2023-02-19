@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Area riservata utente - Palestra di arrampicata GAM</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex"/>
+</head>
+
+<body>
+  <app-header></app-header>
+
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in: <a href="index.php" lang="en">Home</a> / Area Riservata</em>
+    </p>
+  </nav>
+  <main>
+    <section>
+      <h1>Benvenuto {{ userName }}</h1>
+      <p>
+        Queste sono le <strong>azioni</strong> che puoi <strong>effettuare</strong> dalla <strong>tua</strong> area riservata.
+      </p>
+    </section>
+    <a href="reserved-area/user/course.php?delete=false" class="button">Iscriviti ad un corso</a>
+    <a href="reserved-area/user/course.php?delete=true" class="button">Disiscriviti da un corso</a>
+    <a href="reserved-area/user/courses/subscribed.php" class="button">I corsi a cui sei iscritto</a>
+    <a href="reserved-area/user/subscription/subscription.php" class="button">Abbonati</a>
+    <a href="reserved-area/user/courses/user_subs.php" class="button">Il tuo abbonamento</a>
+    <a href="reserved-area/profile.php" class="button">Modifica profilo</a>
+    <a href="reserved-area/logout.php" class="button">Log out</a>
+  </main>
+  <app-footer></app-footer>
+</body>
+</html>

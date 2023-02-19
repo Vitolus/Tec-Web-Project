@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>{{ pageTitle }} - Palestra di arrampicata GAM</title>
+  <app-head></app-head>
+</head>
+
+<body>
+  <app-header></app-header>
+
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        / {{ pageTitle }}
+      </em>
+    </p>
+  </nav>
+  <main>
+    <article id="gruppi">
+      <table id="courses"
+        summary="La tabella elenca i corsi disponibili per l'iscrizione. Ciascuna riga contiene il nome del corso, la descrizione e l'istruttore che tiene il corso">
+        <caption>
+          <h1>Corsi disponibili</h1>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Nome del corso</th>
+            <th scope="col">Descrizione</th>
+            <th scope="col">Numero massimo partecipanti</th>
+            <th scope="col">Azione</th>
+          </tr>
+        </thead>
+        <tbody>
+          <data-group></data-group>
+        </tbody>
+      </table>
+
+      <div class="alert warning hidden" id="courses-empty" role="alert">Nessun corso da visualizzare al momento.</div>
+    </article>
+
+    <div id="scroll-top-wrapper" class="rounded-full">
+      <a class="rounded-full" href="courses.php#"><img src="assets/images/arrow.svg" alt="Torna su"></a>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

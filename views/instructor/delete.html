@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Cancella corso</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex"/>
+  <script src="scripts/instructor/delete.js"></script>
+</head>
+
+<body class="delete">
+  <app-header></app-header>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        /
+        <a href="reserved-area/instructor/list.php">I tuoi corsi</a>
+        / Cancella corso
+      </em>
+    </p>
+  </nav>
+  <main>
+    <section>
+      <h1>Cancella corso</h1>
+      <p>
+        Qui puoi <strong>cancellare</strong> il corso "<strong>{{ courseTitle }}</strong>".
+      </p>
+    </section>
+    
+    <form class="cols-2" id="delete">
+      <p>Sei sicuro di voler cancellare il corso?</p>
+      
+      <div>
+        <a href="reserved-area/instructor/list.php">Annulla</a>
+        <input type="submit" value="Cancella" class="button"/>
+      </div>
+    </form>
+    
+    <div class='alert error hidden' id='form-error'>
+      <p>Errore durante l'operazione di cancellazione.</p>
+    </div>
+    
+    <div class='alert success hidden' id='form-success'>
+      <p>
+        Il corso è stato cancellato con successo.
+        <a href='reserved-area/instructor/list.php'>Clicca qui per tornare ai tuoi corsi</a>.
+      </p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

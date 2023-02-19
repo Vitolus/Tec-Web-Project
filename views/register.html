@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <title>Registrazione Utente</title>
+    <app-head></app-head>
+    <script src="scripts/fetch.js"></script>
+</head>
+
+<body class="register">
+    <app-header></app-header>
+    <nav id="breadcrumb" aria-label="breadcrumb">
+        <p>
+            <em>Ti trovi in: <a href="index.php" lang="en">Home</a> /
+                <a href="reserved-area">Area Riservata</a>
+                / Registrati</em>
+        </p>
+    </nav>
+
+    <main>
+        <section>
+            <h1>Registrazione</h1>
+            <p>
+                Compila <strong>i campi</strong> qui sotto per avere accesso al sito web, potrai
+                <strong>prenotare corsi</strong> oppure visualizzare alcune delle nostre <strong>offerte
+                    speciali</strong> riservate soltanto agli <strong>utenti registrati</strong>.
+            </p>
+        </section>
+
+        <form class="cols-2" id="register">
+            <label for="name"><strong>Nome:</strong></label>
+            <input type="text" id="name" name="name" placeholder="Nome" minlength="2" maxlength="64" />
+
+            <label for="surname"><strong>Cognome:</strong></label>
+            <input type="text" id="surname" name="surname" placeholder="Cognome" minlength="2" maxlength="64" />
+
+            <label for="gender"><strong>Genere:</strong></label>
+            <select id="gender" name="gender">
+                <option value="default" selected="selected" disabled="disabled">Scegli</option>
+                <option value="M">Maschio</option>
+                <option value="F">Femmina</option>
+            </select>
+
+            <label for="phone-number"><strong>Telefono cellulare:</strong></label>
+            <input type="tel" id="phone-number" name="phone-number" placeholder="es: 3208768711" minlength="10"
+                maxlength="10" />
+
+            <label for="username"><strong>Nome utente:</strong></label>
+            <input type="text" id="username" name="username" placeholder="Nome utente" minlength="5" maxlength="64" />
+
+            <label for="email-address"><strong>E-mail:</strong></label>
+            <input type="email" id="email-address" name="email-address" placeholder="E-mail" minlength="20"
+                maxlength="64" />
+
+            <label for="password"><strong>Password:</strong></label>
+            <input type="password" id="password" name="password" placeholder="Password" minlength="5" maxlength="64" />
+
+            <div class="col-span-2">
+                <input type="submit" value="Registrati" class="button" />
+            </div>
+        </form>
+
+        <div class="alert error hidden" id="form-error"></div>
+
+        <div class="alert success hidden" id="form-success">
+            <p>Grazie per esserti registrato! <a href="reserved-area/control-panel.php">Accedi alla pagina
+                    personale</a>.</p>
+        </div>
+    </main>
+
+    <app-footer></app-footer>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Corsi a cui sei iscritto</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex" />
+
+</head>
+
+<body>
+  <app-header></app-header>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        /
+        I corsi a cui sei iscritto
+      </em>
+    </p>
+  </nav>
+  <main>
+    <h1>Corsi iscritto</h1>
+    <p>
+      Qui puoi vedere i corsi a cui sei iscritto.
+    </p>
+
+    <article id="gruppi">
+      <table id="courses"
+        summary="La tabella elenca i corsi di gruppo disponibili per l'iscrizione. Ciascuna riga contiene il nome del corso, la descrizione e l'istruttore che tiene il corso">
+        <caption>
+          <h2>Corsi iscritto</h2>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Nome del corso</th>
+            <th scope="col">Descrizione</th>
+            <th scope="col">Numero massimo partecipanti</th>
+          </tr>
+        </thead>
+        <tbody>
+          <data-group></data-group>
+        </tbody>
+      </table>
+
+      <div class="alert warning hidden" id="courses-empty" role="alert">Non ti sei iscritto a nessun corso. Torna indietro e clicca su <em>"Iscriviti ad un corso"</em>.</div>
+    </article>
+
+  </main>
+
+  <app-footer></app-footer>
+</body>
+
+</html>

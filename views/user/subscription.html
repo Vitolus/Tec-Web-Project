@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Abbonamenti - Palestra di arrampicata GAM</title>
+  <app-head></app-head>
+</head>
+
+<body>
+  <app-header></app-header>
+
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        / Abbonati
+      </em>
+    </p>
+  </nav>
+  <main>
+    <h1>Abbonamenti disponibili</h1>
+
+    <table
+      id="subscriptions"
+      summary="La tabella elenca gli abbonamenti disponibili, ognuno con la sua tipologia e durata">
+      <caption>
+        <h2>Abbonamenti utente</h2>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Tipo</th>
+          <th scope="col">Data inizio</th>
+          <th scope="col">Data fine</th>
+          <th scope="col">Azione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <data-group></data-group>
+      </tbody>
+    </table>
+
+    <div id="scroll-top-wrapper" class="rounded-full">
+      <a class="rounded-full" href="courses.php#"><img src="assets/images/arrow.svg" alt="Torna su"></a>
+    </div>
+
+    <div class='alert error hidden' id='form-error'></div>
+    <div class='alert success hidden' id='form-success'>
+      <p>
+        Abbonamento avvenuto con successo.
+        <a href="reserved-area/control-panel.php">Clicca qui per tornare al tuo pannello.</a>.
+      </p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

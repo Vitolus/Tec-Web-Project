@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Amministrazione abbonamenti - Palestra di arrampicata GAM</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex" />
+
+</head>
+
+<body>
+  <app-header></app-header>
+
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in: <a href="index.php" lang="en">Home</a> /
+        <a href="reserved-area/control-panel.php">Area Riservata</a> / Amministrazione abbonamenti</em>
+    </p>
+  </nav>
+  <a class="aiuti" href="index.php#subscriptions">Salta agli abbonamenti</a>
+
+  <main>
+    <section>
+      <h1>Amministrazione abbonamenti</h1>
+      <p>
+        Ti trovi nella pagina di <strong>gestione</strong> degli <strong>abbonamenti</strong>.
+      </p>
+      <p>
+        Qui potrai <strong>visualizzare</strong> gli abbonamenti disponibili, <strong>creare</strong> nuovi abbonamenti
+        oppure <strong>modificare</strong> o <strong>cancellare</strong> quelli già esistenti.
+      </p>
+    </section>
+    <section id="subscriptions">
+      <table id="subscriptions-table">
+        <caption>
+          <h2>Tabella degli abbonamenti disponibili</h2>
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Durata</th>
+            <th scope="col">Data di inizio</th>
+            <th scope="col">Data di fine</th>
+            <th scope="col">Azioni</th>
+          </tr>
+        </thead>
+        <tbody>
+          <data-subs></data-subs>
+        </tbody>
+      </table>
+
+      <div class="alert warning hidden" id="subscriptions-table-empty" role="alert">Nessun abbonamento al momento
+        disponibile. Creane uno!</div>
+
+      <a href="reserved-area/admins/add-sub.php" class="button">Aggiungi Abbonamento</a>
+    </section>
+
+    <div id="scroll-top-wrapper" class="rounded-full">
+      <a class="rounded-full" href="reserved-area/admins/subs.php#"><img src="assets/images/arrow.svg"
+          alt="Torna su"></a>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>

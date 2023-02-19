@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <title>Aggiungi corso - Palestra di arrambicata GAM</title>
+  <app-head></app-head>
+  <meta name="robots" content="noindex"/>
+  <script src='scripts/instructor/add.js'></script>
+</head>
+
+<body class="add">
+  <app-header></app-header>
+  <nav id="breadcrumb" aria-label="breadcrumb">
+    <p>
+      <em>Ti trovi in:
+        <a href="index.php" lang="en">Home</a>
+        /
+        <a href="reserved-area/control-panel.php">Area Riservata</a>
+        /
+        <a href="reserved-area/instructor/list.php">I tuoi corsi</a>
+        / Aggiungi corso
+      </em>
+    </p>
+  </nav>
+  
+  <main>
+    <form class="cols-2" id="add">
+      <label for="title"><strong>Titolo:</strong></label>
+      <input type="text" id="title" name="title" placeholder="Nome" minlength="10" maxlength="32" required/>
+      
+      <label for="description"><strong>Descrizione:</strong></label>
+      <textarea id="description" name="description" minlength="20" maxlength="1000" required></textarea>
+      
+      <label for="partecipants"><strong>Numero massimo di partecipanti:</strong></label>
+      <input type="number" id="partecipants" name="partecipants" placeholder="eg. 10" min="1" max="10" required/>
+      
+      <div class="col-span-2">
+        <input type="submit" value="Aggiungi" class="button"/>
+      </div>
+    </form>
+    
+    <div class="alert error hidden" id="form-error"></div>
+    
+    <div class="alert success hidden" id="form-success">
+      <p>
+        Corso aggiunto con successo!
+        <a href='reserved-area/instructor/list.php'>Clicca qui per tornare ai tuoi corsi</a>.
+      </p>
+    </div>
+  </main>
+  <app-footer></app-footer>
+</body>
+
+</html>
